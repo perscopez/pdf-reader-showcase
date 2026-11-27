@@ -1,0 +1,363 @@
+{
+  "generatedAt": "deterministic",
+  "totalWebEndpoints": 33,
+  "coveredNativeEndpoints": 33,
+  "missingNativeEndpoints": 0,
+  "rows": [
+    {
+      "endpoint": "/api/annotations",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx",
+        "components/SelectionPopup.tsx"
+      ],
+      "examples": [
+        "/api/annotations?book_id=${bookId}",
+        "/api/annotations?id=${existing.id}",
+        "/api/annotations",
+        "/api/annotations?id=${id}",
+        "/api/annotations?id=${item.id}"
+      ]
+    },
+    {
+      "endpoint": "/api/ask-ai",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/ask-ai"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/login",
+      "native": true,
+      "webFiles": [
+        "app/login/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/login"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/logout",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx",
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/auth/logout"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/me",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/me"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/profile",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/profile"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/recover-vault",
+      "native": true,
+      "webFiles": [
+        "app/login/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/recover-vault"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/register",
+      "native": true,
+      "webFiles": [
+        "app/login/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/register"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/resend-verification",
+      "native": true,
+      "webFiles": [
+        "app/login/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/resend-verification"
+      ]
+    },
+    {
+      "endpoint": "/api/auth/restore-account",
+      "native": true,
+      "webFiles": [
+        "app/login/page.tsx"
+      ],
+      "examples": [
+        "/api/auth/restore-account"
+      ]
+    },
+    {
+      "endpoint": "/api/backup",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx",
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/backup"
+      ]
+    },
+    {
+      "endpoint": "/api/bookmarks",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/bookmarks?book_id=${bookId}",
+        "/api/bookmarks?id=${existing.id}",
+        "/api/bookmarks",
+        "/api/bookmarks?id=${item.id}"
+      ]
+    },
+    {
+      "endpoint": "/api/books",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/books"
+      ]
+    },
+    {
+      "endpoint": "/api/books/:param",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx",
+        "components/PDFReader.tsx",
+        "components/ReaderPageContent.tsx"
+      ],
+      "examples": [
+        "/api/books/${book.id}",
+        "/api/books/${localBook.server_id}",
+        "/api/books/${bookId}",
+        "/api/books/${local.server_id}",
+        "/api/books/${id}"
+      ]
+    },
+    {
+      "endpoint": "/api/books/:param/export",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/books/${bookId}/export"
+      ]
+    },
+    {
+      "endpoint": "/api/books/:param/page-text",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx",
+        "components/ReflowReader.tsx"
+      ],
+      "examples": [
+        "/api/books/${bookId}/page-text?page=${currentPage}"
+      ]
+    },
+    {
+      "endpoint": "/api/books/:param/sessions",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/books/${bookId}/sessions"
+      ]
+    },
+    {
+      "endpoint": "/api/books/import",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/books/import"
+      ]
+    },
+    {
+      "endpoint": "/api/books/search-source",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/books/search-source?q=${encodeURIComponent"
+      ]
+    },
+    {
+      "endpoint": "/api/bug-reports",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx",
+        "components/BugReportDialog.tsx"
+      ],
+      "examples": [
+        "/api/bug-reports"
+      ]
+    },
+    {
+      "endpoint": "/api/dictionary",
+      "native": true,
+      "webFiles": [
+        "app/words/page.tsx",
+        "components/SelectionPopup.tsx"
+      ],
+      "examples": [
+        "/api/dictionary?word=${encodeURIComponent"
+      ]
+    },
+    {
+      "endpoint": "/api/dmca",
+      "native": true,
+      "webFiles": [
+        "app/dmca/page.tsx"
+      ],
+      "examples": [
+        "/api/dmca"
+      ]
+    },
+    {
+      "endpoint": "/api/pdf/:param",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx",
+        "components/ReaderPageContent.tsx"
+      ],
+      "examples": [
+        "/api/pdf/${encodeURIComponent",
+        "/api/pdf/${tempFilename}"
+      ]
+    },
+    {
+      "endpoint": "/api/reading-summary",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/reading-summary"
+      ]
+    },
+    {
+      "endpoint": "/api/search",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/search?q=${encodeURIComponent"
+      ]
+    },
+    {
+      "endpoint": "/api/sync/devices",
+      "native": true,
+      "webFiles": [
+        "components/SyncProvider.tsx"
+      ],
+      "examples": [
+        "/api/sync/devices"
+      ]
+    },
+    {
+      "endpoint": "/api/sync/pull",
+      "native": true,
+      "webFiles": [
+        "components/SyncProvider.tsx"
+      ],
+      "examples": [
+        "/api/sync/pull?${params.toString"
+      ]
+    },
+    {
+      "endpoint": "/api/sync/push",
+      "native": true,
+      "webFiles": [
+        "components/SyncProvider.tsx"
+      ],
+      "examples": [
+        "/api/sync/push"
+      ]
+    },
+    {
+      "endpoint": "/api/tdk",
+      "native": true,
+      "webFiles": [
+        "app/words/page.tsx",
+        "components/SelectionPopup.tsx"
+      ],
+      "examples": [
+        "/api/tdk?q=${encodeURIComponent"
+      ]
+    },
+    {
+      "endpoint": "/api/translate",
+      "native": true,
+      "webFiles": [
+        "components/SelectionPopup.tsx"
+      ],
+      "examples": [
+        "/api/translate"
+      ]
+    },
+    {
+      "endpoint": "/api/tts",
+      "native": true,
+      "webFiles": [
+        "components/PDFReader.tsx"
+      ],
+      "examples": [
+        "/api/tts"
+      ]
+    },
+    {
+      "endpoint": "/api/upload",
+      "native": true,
+      "webFiles": [
+        "app/page.tsx"
+      ],
+      "examples": [
+        "/api/upload"
+      ]
+    },
+    {
+      "endpoint": "/api/words",
+      "native": true,
+      "webFiles": [
+        "app/words/page.tsx",
+        "components/SelectionPopup.tsx"
+      ],
+      "examples": [
+        "/api/words",
+        "/api/words?id=${id}",
+        "/api/words?ids=${ids.join"
+      ]
+    }
+  ]
+}

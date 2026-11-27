@@ -1,0 +1,57 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_BUILD_SHA: ${NEXT_PUBLIC_BUILD_SHA:-unknown}
+        NEXT_PUBLIC_BUILD_TIME: ${NEXT_PUBLIC_BUILD_TIME:-unknown}
+    container_name: pdf-library-app
+    restart: unless-stopped
+    env_file:
+      - .env.local
+    environment:
+      PUBLIC_APP_URL: ${PUBLIC_APP_URL:-http://localhost:3000}
+    volumes:
+      - ./data:/app/data
+      - ./public/uploads:/app/public/uploads
+      - ${BACKUP_HOST_DIR:-./backups}:/app/host-backups
+    ports:
+      - "127.0.0.1:3000:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  nginx:
+    image: nginxinc/nginx-unprivileged:alpine
+    container_name: pdf-library-nginx
+    profiles: ["bundled-proxy"]
+    restart: unless-stopped
+    ports:
+      - "80:8080"
+      - "443:8443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      app:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  coqui-tts:
+    image: coqui/tts:latest
+    container_name: coqui-tts
+    restart: unless-stopped
+    environment:
+      - TTS_MODEL_NAME=tts_models/tr/tr_tacotron2-DDC
+    ports:
+      - "5002:5002"
+    profiles:
+      - tts-optional

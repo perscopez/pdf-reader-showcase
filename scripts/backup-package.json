@@ -1,0 +1,8 @@
+{
+  "name": "pdf-library-backup-deps",
+  "private": true,
+  "dependencies": {
+    "archiver": "^8.0.0",
+    "jszip": "^3.10.1"
+  }
+}
